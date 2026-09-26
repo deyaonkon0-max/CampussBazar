@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Books &amp; Accessories — CampusBazaar</title>
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="books.css">
+</head>
+<body>
+<header class="site"><div id="site-header"></div></header>
+<main class="wrap">
+  <div class="section-pad">
+    <div class="section-head">
+      <h2>Books &amp; Accessories</h2>
+      <p>Open across universities — your textbook's next reader might be somewhere else entirely.</p>
+    </div>
+    <div class="filter-bar">
+      <div class="search-input-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" class="search-input" id="bookSearch" placeholder="Search by title or course code…">
+      </div>
+    </div>
+    <div class="filter-bar" id="bookUniPills"></div>
+    <div class="grid grid-3" id="bookGrid"></div>
+  </div>
+</main>
+<footer class="site"><div id="site-footer"></div></footer>
+<script>window.CB_ACTIVE_PAGE = 'books';</script>
+<script src="data.js"></script>
+<script src="store.js"></script>
+<script src="shared.js"></script>
+<script src="nav.js"></script>
+<script src="books.js"></script>
+</body>
+</html>

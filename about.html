@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — CampusBazaar</title>
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="about.css">
+</head>
+<body>
+<header class="site"><div id="site-header"></div></header>
+<main class="wrap">
+  <div class="section-pad">
+    <div class="section-head">
+      <h2>About CampusBazaar</h2>
+      <p>A Student friendly buy-sell and exchange Bazar</p>
+    </div>
+    <p class="about-copy">
+      University students trade constantly — used textbooks, gadgets, cycles, dorm items — but the usual channels
+      (scattered Facebook groups) offer no way to verify who you're dealing with. CampusBazaar centralizes buying,
+      selling, and exchanging into one platform, built specifically around trust: verified student IDs reviewed by
+      each university's own admin, seller ratings, and listings that clear the moment they're sold.
+    </p>
+    <div class="divider"></div>
+    <h3 style="font-size:19px;margin-bottom:16px;">Team</h3>
+    <div class="grid grid-3">
+      <div class="team-card"><div class="team-avatar">👤</div><strong>Sadman</strong><p class="small-muted" style="margin-top:4px;">Frontend</p></div>
+      <div class="team-card"><div class="team-avatar">👤</div><strong>Maisha</strong><p class="small-muted" style="margin-top:4px;">Backend</p></div>
+      <div class="team-card"><div class="team-avatar">👤</div><strong>Aonkon</strong><p class="small-muted" style="margin-top:4px;">Nothing</p></div>
+    </div>
+    <div class="divider"></div>
+    <h3 style="font-size:19px;margin-bottom:16px;">Contact</h3>
+    <form class="form-card" style="max-width:560px;" id="contactForm">
+      <div class="field"><label>Name</label><input type="text" required></div>
+      <div class="field"><label>Email</label><input type="email" required></div>
+      <div class="field"><label>Message</label><textarea required></textarea></div>
+      <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+      <div class="toast" id="contactToast">✓ Message sent (demo) — thanks for reaching out!</div>
+    </form>
+  </div>
+</main>
+<footer class="site"><div id="site-footer"></div></footer>
+<script>window.CB_ACTIVE_PAGE = 'about';</script>
+<script src="data.js"></script>
+<script src="store.js"></script>
+<script src="shared.js"></script>
+<script src="nav.js"></script>
+<script src="about.js"></script>
+</body>
+</html>
