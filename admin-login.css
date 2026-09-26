@@ -1,0 +1,34 @@
+/*admin-login.css */
+.narrow-col {
+  max-width: 520px;
+  margin: 0 auto;
+}
+.demo-box {
+  margin-top: 20px;
+}
+.demo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 12.5px;
+}
+.demo-row:last-child {
+  border-bottom: none;
+}
+.demo-row button {
+  background: #fff;
+  border: 1px solid var(--border-btn);
+  border-radius: 9px;
+  padding: 5px 12px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--indigo);
+}
+.demo-row button:hover {
+  background: var(--grad-btn);
+  color: var(--white);
+  border-color: transparent;
+}
