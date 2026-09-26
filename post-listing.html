@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Post a Listing — CampusBazaar</title>
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="post-listing.css">
+</head>
+<body>
+<header class="site"><div id="site-header"></div></header>
+<main class="wrap">
+  <div class="section-pad narrow-col" id="gateWrap">
+    <div class="empty-state">
+      You need to be logged in to post a listing. <a href="student-login.html">Log in here</a>.
+    </div>
+  </div>
+  <div class="section-pad narrow-col" id="formWrap" style="display:none;">
+    <div class="section-head">
+      <h2>Post a Listing</h2>
+      <p>Posting as <strong id="postAsLabel"></strong>. Fields adjust automatically based on what you're listing.</p>
+    </div>
+    <form class="form-card" id="postListingForm" novalidate>
+      <div class="field" id="f-title">
+        <label>Listing Title</label>
+        <input type="text" id="titleInput" placeholder="e.g. TI-84 Plus Graphing Calculator">
+        <div class="field-error">Please enter a title.</div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Type</label>
+          <select id="listingType">
+            <option value="product">Product</option>
+            <option value="book">Book / Accessory</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Condition</label>
+          <select id="conditionInput">
+            <option>New</option>
+            <option>Like New</option>
+            <option>Good</option>
+            <option>Fair</option>
+          </select>
+        </div>
+      </div>
+      <div id="bookFieldsWrap" style="display:none;">
+        <div class="field-row">
+          <div class="field" id="f-university">
+            <label>University</label>
+            <input type="text" id="universityInput" placeholder="e.g. Premier University">
+            <div class="field-error">University is required for books.</div>
+          </div>
+          <div class="field" id="f-course">
+            <label>Course Code / Subject</label>
+            <input type="text" id="courseInput" placeholder="e.g. CSE 1116">
+            <div class="field-error">Course code is required for books.</div>
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <label>Listing Mode</label>
+        <div class="mode-toggle">
+          <div class="mode-option selected" data-mode="sale">For Sale</div>
+          <div class="mode-option" data-mode="exchange">For Exchange</div>
+        </div>
+      </div>
+      <div class="field" id="f-price">
+        <label>Price (৳)</label>
+        <input type="number" id="priceInput" placeholder="e.g. 1200" min="1">
+        <div class="field-error">Enter a valid price.</div>
+      </div>
+      <div class="field" id="f-lookingfor" style="display:none;">
+        <label>Looking For</label>
+        <input type="text" id="lookingForInput" placeholder="What would you take in trade?">
+        <div class="field-error">Tell buyers what you'd trade for.</div>
+      </div>
+      <div class="field">
+        <label>Description</label>
+        <textarea id="descInput" placeholder="Condition details, why you're selling, pickup location…"></textarea>
+      </div>
+      <div class="field">
+        <label>Photo</label>
+        <div class="file-drop">
+          <div class="file-drop-icon">📷</div>
+          <div style="font-size:13.5px;font-weight:600;">Click to upload a photo</div>
+          <div class="small-muted">PNG or JPG, up to 5MB</div>
+          <input type="file" accept="image/*" id="listingPhotoInput">
+        </div>
+        <div class="file-preview" id="listingPhotoPreview">
+          <img id="listingPhotoImg" src="" alt="">
+          <span id="listingPhotoName" class="small-muted"></span>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Post Listing</button>
+      <div class="toast" id="listingToast">✓ Listing posted! It's now live on the Marketplace.</div>
+    </form>
+  </div>
+</main>
+<footer class="site"><div id="site-footer"></div></footer>
+<script>window.CB_ACTIVE_PAGE = 'post-listing';</script>
+<script src="data.js"></script>
+<script src="store.js"></script>
+<script src="shared.js"></script>
+<script src="nav.js"></script>
+<script src="post-listing.js"></script>
+</body>
+</html>
