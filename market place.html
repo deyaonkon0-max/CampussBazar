@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketplace — CampusBazaar</title>
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="marketplace.css">
+</head>
+<body>
+<header class="site"><div id="site-header"></div></header>
+<main class="wrap">
+  <div class="section-pad">
+    <div class="section-head">
+      <h2>Marketplace</h2>
+      <p>Everyday items, filtered by what you actually want.</p>
+    </div>
+    <div class="filter-bar">
+      <div class="search-input-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" class="search-input" id="marketSearch" placeholder="Search items…">
+      </div>
+    </div>
+    <div class="filter-bar" id="marketCategoryPills"></div>
+    <div class="grid grid-3" id="marketGrid"></div>
+  </div>
+</main>
+<footer class="site"><div id="site-footer"></div></footer>
+<script>window.CB_ACTIVE_PAGE = 'marketplace';</script>
+<script src="data.js"></script>
+<script src="store.js"></script>
+<script src="shared.js"></script>
+<script src="nav.js"></script>
+<script src="marketplace.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Dashboard — CampusBazaar</title>
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+<header class="site"><div id="site-header"></div></header>
+<main class="wrap">
+<div class="section-pad" id="gateWrap">
+<div class="empty-state">
+You need to be logged in to view your dashboard. <a href="student-login.html">Log in here</a>.
+</div>
+</div>
+<div class="section-pad" id="dashWrap" style="display:none;">
+<div class="admin-header">
+<div>
+<div class="eyebrow" id="studentUniLabel"></div>
+<h2>My Dashboard</h2>
+<p class="small-muted" id="studentNameLabel"></p>
+</div>
+<button class="btn btn-ghost btn-sm" id="logoutBtn">Log Out</button>
+</div>
+<div class="tabs">
+<button class="tab-btn active" data-tab="listings">My Listings</button>
+<button class="tab-btn" data-tab="ratings">My Ratings</button>
+</div>
+<div class="tab-panel active" id="tab-listings"><div id="dashListingsWrap"></div></div>
+<div class="tab-panel" id="tab-ratings">
+<div class="review-card"><div class="review-top"><strong>Imran S.</strong><span class="stars">★★★★★</span></div><p class="small-muted">Great condition, easy meetup on campus.</p></div>
+<div class="review-card"><div class="review-top"><strong>Sadia R.</strong><span class="stars">★★★★★</span></div><p class="small-muted">Very responsive, honest about wear on the item.</p></div>
+</div>
+</div>
+</main>
+<footer class="site"><div id="site-footer"></div></footer>
+<script>window.CB_ACTIVE_PAGE = 'dashboard';</script>
+<script src="data.js"></script>
+<script src="store.js"></script>
+<script src="shared.js"></script>
+<script src="nav.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>
