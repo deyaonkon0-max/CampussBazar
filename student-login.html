@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Login — CampusBazaar</title>
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="student-login.css">
+</head>
+<body>
+
+<header class="site"><div id="site-header"></div></header>
+
+<main class="wrap">
+  <div class="section-pad narrow-col">
+    <div class="section-head">
+      <h2>Student Login</h2>
+      <p>For students who've already signed up and been verified. New here? <a href="signup.html" style="color:var(--navy);font-weight:600;">Sign up instead</a>.</p>
+    </div>
+    <form class="form-card" id="loginForm" novalidate>
+      <div class="field" id="f-email">
+        <label>Email</label>
+        <input type="email" id="loginEmail">
+        <div class="field-error">Enter the email you signed up with.</div>
+      </div>
+      <div class="field" id="f-password">
+        <label>Password</label>
+        <input type="password" id="loginPassword">
+        <div class="field-error">Incorrect password.</div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Log In</button>
+      <div class="toast error" id="notFoundError">No account matches that email and password.</div>
+      <div class="toast warn" id="pendingError">Your signup is still pending review by your university's admin. Check back once it's approved.</div>
+      <div class="toast error" id="rejectedError">Your signup was rejected. Contact your university's admin, or sign up again with correct info.</div>
+    </form>
+    <div class="card-white demo-box">
+      <div style="font-weight:700;font-size:13px;margin-bottom:10px;">Demo accounts (this is a prototype — no real auth)</div>
+      <div id="demoAccountList"></div>
+    </div>
+  </div>
+</main>
+<footer class="site"><div id="site-footer"></div></footer>
+<script>window.CB_ACTIVE_PAGE = '';</script>
+<script src="data.js"></script>
+<script src="store.js"></script>
+<script src="shared.js"></script>
+<script src="nav.js"></script>
+<script src="student-login.js"></script>
+</body>
+</html>

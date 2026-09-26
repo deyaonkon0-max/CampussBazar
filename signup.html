@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up — CampusBazaar</title>
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+<header class="site"><div id="site-header"></div></header>
+
+<main class="wrap">
+  <div class="section-pad narrow-col">
+    <div class="section-head">
+      <h2>Signup &amp; Verification</h2>
+      <p>Your ID goes to your university's admin for review before you can list items. Already verified? <a href="student-login.html" style="color:var(--navy);font-weight:600;">Log in instead</a>.</p>
+    </div>
+    <form class="form-card" id="signupForm" novalidate>
+      <div class="field-row">
+        <div class="field" id="f-name"><label>Full Name</label><input type="text" id="nameInput"><div class="field-error">Name is required.</div></div>
+        <div class="field" id="f-sid"><label>Student ID</label><input type="text" id="sidInput" placeholder="e.g. 2022-CSE-045"><div class="field-error">Student ID is required.</div></div>
+      </div>
+      <div class="field-row">
+        <div class="field" id="f-uni">
+          <label>University</label>
+          <select id="uniInput">
+            <option value="">Select your university…</option>
+          </select>
+          <div class="field-error">Please select your university.</div>
+        </div>
+        <div class="field"><label>Department</label><input type="text" id="deptInput" placeholder="e.g. CSE"></div>
+      </div>
+      <div class="field-row">
+        <div class="field" id="f-email"><label>Email</label><input type="email" id="emailInput"><div class="field-error">A valid email is required.</div></div>
+        <div class="field"><label>Phone</label><input type="tel" id="phoneInput"></div>
+      </div>
+      <div class="field" id="f-password">
+        <label>Create a Password</label>
+        <input type="password" id="passwordInput" placeholder="Used to log in once you're verified">
+        <div class="field-error">Password must be at least 4 characters.</div>
+      </div>
+      <div class="field">
+        <label>Upload Student ID Card</label>
+        <div class="file-drop">
+          <div class="file-drop-icon">🪪</div>
+          <div style="font-size:13.5px;font-weight:600;">Click to upload your ID card</div>
+          <div class="small-muted">Reviewed by your university's admin</div>
+          <input type="file" accept="image/*" id="idCardInput">
+        </div>
+        <div class="file-preview" id="idCardPreview">
+          <img id="idCardImg" src="" alt="">
+          <span id="idCardName" class="small-muted"></span>
+        </div>
+      </div>
+      <div class="checkbox-row" style="margin-bottom:22px;">
+        <input type="checkbox" id="termsCheck">
+        <label for="termsCheck">I confirm this information is accurate and agree to CampusBazaar's terms.</label>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+      <div class="toast warn" id="signupToast">⏳ Account created — sent to your university admin for verification.</div>
+      <div id="alreadyPendingNote" class="toast warn" style="display:none;">You already have a pending verification request with this email.</div>
+    </form>
+  </div>
+</main>
+<footer class="site"><div id="site-footer"></div></footer>
+<script>window.CB_ACTIVE_PAGE = '';</script>
+<script src="data.js"></script>
+<script src="store.js"></script>
+<script src="shared.js"></script>
+<script src="nav.js"></script>
+<script src="signup.js"></script>
+</body>
+</html>
