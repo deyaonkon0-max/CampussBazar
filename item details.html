@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Item Details — CampusBazaar</title>
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="item-details.css">
+</head>
+<body>
+<header class="site"><div id="site-header"></div></header>
+<main class="wrap">
+  <div class="section-pad" id="detailsWrap">
+    <a href="javascript:history.back()" class="back-link">← Back to listings</a>
+    <div class="detail-grid" id="detailsContent" style="display:none;">
+      <div>
+        <div class="detail-thumb" id="detailThumb"></div>
+        <div class="listing-tags" id="detailTags" style="margin-top:16px;"></div>
+        <h1 class="detail-title" id="detailTitle"></h1>
+        <div class="detail-price" id="detailPrice"></div>
+        <p class="detail-desc" id="detailDesc"></p>
+        <p class="small-muted" id="detailMeta" style="margin-top:14px;"></p>
+      </div>
+      <div>
+        <div class="seller-box">
+          <div class="seller-top">
+            <div class="seller-name-row">
+              <div class="avatar" id="detailAvatar"></div>
+              <div>
+                <a href="#" id="detailSellerLink" style="font-weight:700;color:var(--navy);"></a>
+                <div class="rating-inline" id="detailSellerEmail"></div>
+              </div>
+            </div>
+            <div class="stamp"><span class="stamp-icon">✓</span>VERIFIED</div>
+          </div>
+          <div class="action-row">
+            <button class="btn btn-primary" id="contactSellerBtn" style="flex:1;">Contact Seller</button>
+            <button class="btn btn-primary" id="proposeExchangeBtn" style="flex:1;display:none;">Propose Exchange</button>
+            <button class="chat-fab" id="chatFab" title="Chat with seller">💬</button>
+          </div>
+          <div class="contact-reveal" id="contactReveal">
+            📞 +880 1XX-XXXXXXX &nbsp; · &nbsp; ✉️ <span id="contactEmail"></span>
+          </div>
+          <div class="toast" id="exchangeToast">✓ Exchange proposal sent (demo).</div>
+          <div class="chat-box" id="chatBox">
+            <div class="chat-box-header">
+              <span>Chat with <span id="chatSellerName"></span></span>
+              <button id="chatCloseBtn" style="background:none;border:none;color:white;cursor:pointer;font-size:16px;">✕</button>
+            </div>
+            <div class="chat-box-body">
+              💬 Messaging isn't built yet — this is a placeholder for a future release.<br>
+              Use "Contact Seller" for now.
+            </div>
+          </div>
+          <a href="#" id="viewProfileLink" class="btn btn-ghost btn-block" style="margin-top:14px;">View Full Profile</a>
+        </div>
+      </div>
+    </div>
+    <div class="empty-state" id="notFoundState" style="display:none;">
+      Couldn't find that listing — it may have been removed. <a href="marketplace.html">Back to Marketplace</a>
+    </div>
+    <div class="divider"></div>
+    <div class="section-head"><h2 style="font-size:22px;">Related listings</h2></div>
+    <div class="grid grid-3" id="relatedGrid"></div>
+  </div>
+</main>
+<footer class="site"><div id="site-footer"></div></footer>
+<script>window.CB_ACTIVE_PAGE = '';</script>
+<script src="data.js"></script>
+<script src="store.js"></script>
+<script src="shared.js"></script>
+<script src="nav.js"></script>
+<script src="item-details.js"></script>
+</body>
+</html>
