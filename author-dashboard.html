@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Author Dashboard — CampusBazaar</title>
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="author-dashboard.css">
+</head>
+<body>
+
+<header class="site"><div id="site-header"></div></header>
+
+<main class="wrap">
+  <div class="section-pad" id="gateWrap">
+    <div class="empty-state">
+      Checking your session… if you're not redirected, <a href="admin-login.html">log in here</a>.
+    </div>
+  </div>
+  <div class="section-pad" id="dashWrap" style="display:none;">
+    <div class="admin-header">
+      <div>
+        <div class="eyebrow">Author Panel</div>
+        <h2>University Admins</h2>
+        <p class="small-muted" id="authorNameLabel"></p>
+      </div>
+      <button class="btn btn-ghost btn-sm" id="logoutBtn">Log Out</button>
+    </div>
+    <div id="adminsWrap"></div>
+    <div class="divider"></div>
+    <h3 style="font-size:17px;margin-bottom:14px;">Reassign an admin</h3>
+    <form class="form-card" id="reassignForm" style="max-width:520px;">
+      <div class="field">
+        <label>University</label>
+        <select id="uniSelect"></select>
+      </div>
+      <div class="field"><label>Admin Name</label><input type="text" id="newAdminName" required></div>
+      <div class="field"><label>Admin Email</label><input type="email" id="newAdminEmail" required></div>
+      <div class="field"><label>Admin Password</label><input type="text" id="newAdminPassword" value="admin123" required></div>
+      <button type="submit" class="btn btn-primary btn-block">Save Admin</button>
+      <div class="toast" id="reassignToast">✓ Admin updated for this university.</div>
+    </form>
+  </div>
+</main>
+<footer class="site"><div id="site-footer"></div></footer>
+<script>window.CB_ACTIVE_PAGE = '';</script>
+<script src="data.js"></script>
+<script src="store.js"></script>
+<script src="shared.js"></script>
+<script src="nav.js"></script>
+<script src="author-dashboard.js"></script>
+</body>
+</html>
