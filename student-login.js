@@ -1,5 +1,5 @@
-/*student-login.js*/
 
+/* Demo accounts 
 function renderDemoAccounts() {
   const verifications = cbGetVerifications();
   const sample = [
@@ -21,6 +21,7 @@ function renderDemoAccounts() {
   });
 }
 renderDemoAccounts();
+*/
 function setInvalid(fieldId, invalid) {
   document.getElementById(fieldId).classList.toggle('invalid', invalid);
 }

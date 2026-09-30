@@ -1,8 +1,9 @@
-/*admin-login.css */
+
 .narrow-col {
   max-width: 520px;
   margin: 0 auto;
 }
+/* Demo accounts box styles disabled (kept for reference)
 .demo-box {
   margin-top: 20px;
 }
@@ -32,3 +33,4 @@
   color: var(--white);
   border-color: transparent;
 }
+*/

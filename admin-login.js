@@ -1,6 +1,6 @@
-/* admin-login.js
-  Handles admin/author login, validates credentials, and sets session scope */
 
+
+/* Demo accounts feature
 function renderDemoAccounts() {
   const author = cbGetAuthor();
   const admins = cbGetAdmins();
@@ -22,6 +22,7 @@ function renderDemoAccounts() {
   });
 }
 renderDemoAccounts();
+*/
 function setInvalid(fieldId, invalid) {
   document.getElementById(fieldId).classList.toggle('invalid', invalid);
 }
