@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seller Profile — CampusBazaar</title>
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="seller-profile.css">
+</head>
+<body>
+
+<header class="site"><div id="site-header"></div></header>
+
+<main class="wrap">
+  <div class="section-pad">
+    <div class="profile-header">
+      <div class="avatar-lg" id="profileAvatar"></div>
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+          <h1 style="font-size:26px;" id="profileName"></h1>
+          <div class="stamp"><span class="stamp-icon">✓</span>VERIFIED</div>
+        </div>
+        <p class="small-muted" id="profileMeta" style="margin-top:6px;"></p>
+      </div>
+    </div>
+
+    <div class="rating-summary">
+      <div>
+        <div class="rating-big">4.7</div>
+        <div class="small-muted mono">38 ratings</div>
+      </div>
+      <div class="bars">
+        <div class="bar-row"><span>5★</span><div class="bar-track"><div class="bar-fill" style="width:74%;"></div></div><span>28</span></div>
+        <div class="bar-row"><span>4★</span><div class="bar-track"><div class="bar-fill" style="width:16%;"></div></div><span>6</span></div>
+        <div class="bar-row"><span>3★</span><div class="bar-track"><div class="bar-fill" style="width:5%;"></div></div><span>2</span></div>
+        <div class="bar-row"><span>2★</span><div class="bar-track"><div class="bar-fill" style="width:3%;"></div></div><span>1</span></div>
+        <div class="bar-row"><span>1★</span><div class="bar-track"><div class="bar-fill" style="width:2%;"></div></div><span>1</span></div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <h3 style="font-size:19px;margin-bottom:16px;">Recent reviews</h3>
+    <div class="review-card"><div class="review-top"><strong>Nusrat J.</strong><span class="stars">★★★★★</span></div><p class="small-muted">Smooth handoff, item was exactly as described.</p></div>
+    <div class="review-card"><div class="review-top"><strong>Tanvir H.</strong><span class="stars">★★★★★</span></div><p class="small-muted">Fast replies, verified badge gave me confidence.</p></div>
+
+    <div class="divider"></div>
+    <h3 style="font-size:19px;margin-bottom:16px;">Active listings</h3>
+    <div class="grid grid-3" id="profileListingsGrid"></div>
+  </div>
+</main>
+
+<footer class="site"><div id="site-footer"></div></footer>
+
+<script>window.CB_ACTIVE_PAGE = '';</script>
+<script src="data.js"></script>
+<script src="store.js"></script>
+<script src="shared.js"></script>
+<script src="nav.js"></script>
+<script src="seller-profile.js"></script>
+</body>
+</html>
